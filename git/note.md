@@ -10,4 +10,4 @@
 
 >To use: Right click → TortoiseGit → Settings → Git → Credential. Select Credential helper: wincred - this repository only / wincred - current Windows user
 ![Image of stack overflow](http://i.stack.imgur.com/egH6L.png)
-refer:http://stackoverflow.com/questions/14000173/tortoisegit-save-user-authentication-credentials
+Refer:http://stackoverflow.com/questions/14000173/tortoisegit-save-user-authentication-credentials
