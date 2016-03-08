@@ -1,5 +1,5 @@
 # Code standards
-All code must meet accepted code standards. As a minimum:
+**All code must meet accepted code standards. As a minimum:**
 * HTML must be well formed and valid, XHTML-compliant HTML5:
 * all style separate from content
 * all element tags in lowercase
@@ -22,3 +22,29 @@ no uppercase in files name. Use dash -, not underscore _ as separator
 * Mobile first
 * Responsive
 * Accessible (WCAG 2.0 AA-Level)
+
+### Task Runner
+* Where necessary, scripts & stylesheets will be prcoessed by Gulp scripts.
+* If ES6 is being used for Javascript, then Babel will be the transpiler.
+* BrowserSync can be used to automate page reloading while developing.
+* As far as possible, code should be modularized and separate components should be kept in separate, small js, Less & test files. Kept together in their own folder and combined with a gulp script.
+
+### Code formatting
+
+#### CSS
+* There is a space after the colon.
+* Two spaces before each declaration (no tabs).
+* Properties are ordered alphabetically.
+* Opening bracket on the same line as the rule set.
+* Colour declarations use the short form.
+Excerpt (except for one line) from: Jonathan Snook “Scalable and Modular Architecture for CSS.” (page 126)
+
+### jQuery
+* Use camel case for naming variables.
+* If possible use single quotes around attributes. So `$('.my-class')`, not `$(".my-class")`
+* All variables that are used to store/cache jQuery objects should have a name prefixed with a. $
+* Always cache your jQuery selector returned objects in variables for reuse.
+```javascript
+    var $myDiv = $('#myDiv');
+    $myDiv.on('click', function(){...});
+```
