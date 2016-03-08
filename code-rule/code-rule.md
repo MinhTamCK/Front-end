@@ -17,7 +17,8 @@ no uppercase in files name. Use dash -, not underscore _ as separator
 * CSS style name must use a dash, not underscore. Be all lower-case. And be namespace prefixed eg myob-header
 * LESS files must contain only classes, no identifiers i.e. no #id.
 * LESS variables must be used for all colours and dimensions. No hard-coded constants.
-The site will be:
+
+**The site will be:**
 * Mobile first
 * Responsive
 * Accessible (WCAG 2.0 AA-Level)
