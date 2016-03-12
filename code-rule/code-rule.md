@@ -46,3 +46,39 @@ Excerpt (except for one line) from: Jonathan Snook “Scalable and Modular Archi
     var $myDiv = $('#myDiv');
     $myDiv.on('click', function(){...});
 ```
+* When using class selectors, don't use the element type in your selector.
+```javascript
+	var $products = $('div.products'); // SLOW 
+    var $products = $('.products'); // FAST
+```
+* Do not use anonymous functions to attach events.
+```javascript
+	$('#myLink').on('click', function(){...}); // BAD 
+    //GOOD 
+    function myLinkClickHandler(){...} 
+    $('#myLink').on('click', myLinkClickHandler);
+```
+* Do not mix CSS with jQuery.
+```javascript
+$('#mydiv').css({'color':red, 'font-weight':'bold'}); // BAD 
+    .error { color: red; font-weight: bold; } /* GOOD */ 
+    $('#mydiv').addClass('error'); // GOOD
+```
+* Avoid using behavioural markup in HTML (JavaScript inlining).  
+```javascript
+	<a id="myLink" href="#" onclick="myEventHandler();">my link</a> <!-- BAD -->
+    $("#myLink").on("click", myEventHandler); // GOOD
+```
+* Avoid using `.getJson()` or `.get()`, simply use the `$.ajax()`
+# Avoid using http requests on https sites. Prefer schemaless URLs (leave the protocol http/https out of your URL)
+* Avoid putting request parameters in the URL, send them using data object setting.   
+```javascript
+    $.ajax({ url: "something.php?param1=test1&param2=test2", .... }); // Less readable
+ 	$.ajax({ url: "something.php", data: { param1: test1, param2: test2 } }); // More readable
+ ```
+* Document ready event handler should not be an anonymous function.
+    $(function(){ ... }); // BAD, You can't reuse or test this function properly.  
+    $(initPage); // GOOD or $(document).ready(initPage); // GOOD
+    function initPage(){ // Page load event, you can initialise values here. } 
+ 
+* Images should be lazy loaded.
