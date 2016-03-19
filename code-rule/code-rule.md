@@ -71,15 +71,17 @@ $('#mydiv').css({'color':red, 'font-weight':'bold'}); // BAD
     $("#myLink").on("click", myEventHandler); // GOOD
 ```
 * Avoid using `.getJson()` or `.get()`, simply use the `$.ajax()`
-# Avoid using http requests on https sites. Prefer schemaless URLs (leave the protocol http/https out of your URL)
+* Avoid using http requests on https sites. Prefer schemaless URLs (leave the protocol http/https out of your URL)
 * Avoid putting request parameters in the URL, send them using data object setting.   
 ```javascript
     $.ajax({ url: "something.php?param1=test1&param2=test2", .... }); // Less readable
  	$.ajax({ url: "something.php", data: { param1: test1, param2: test2 } }); // More readable
  ```
 * Document ready event handler should not be an anonymous function.
+	```javascript
     $(function(){ ... }); // BAD, You can't reuse or test this function properly.  
     $(initPage); // GOOD or $(document).ready(initPage); // GOOD
     function initPage(){ // Page load event, you can initialise values here. } 
+    ```
  
-* Images should be lazy loaded.
+* Images should be **lazy loaded.**
