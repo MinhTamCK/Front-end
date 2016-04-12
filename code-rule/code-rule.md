@@ -49,29 +49,29 @@ Excerpt (except for one line) from: Jonathan Snook “Scalable and Modular Archi
     $myDiv.on('click', function(){...});
 ```
 #### Maintainable Javascript
-1. ** Useful Tools **
-• JSLint and JSHint.
-2. ** Blank Lines **
-• Between methods
-• Between the local variables in a method and its first statement
-• Before a multiline or single-line comment
-• Between logical sections inside a method to improve readability
-3.Naming
-• Camel-case
-4.Variables and Functions
-• Variable names are always camel case and should begin with a noun
-** Verb Meaning **
+1. **Useful Tools**
+* JSLint and JSHint.
+2. **Blank Lines**
+* Between methods
+* Between the local variables in a method and its first statement
+* Before a multiline or single-line comment
+* Between logical sections inside a method to improve readability
+3.**Naming**
+* Camel-case
+4.**Variables and Functions**
+* Variable names are always camel case and should begin with a noun
+**Verb Meaning**
 can | Function returns a boolean
 has | Function returns a boolean
 is  | Function returns a boolean
 get | Function returns a nonboolean
 set | Function is used to save a value
-5.Constants
+5.**Constants**
 ```javascript
 var MAX_COUNT = 10;
 ```
-• Name of constant recomment uppercase.
-6.Constructors
+* Name of constant recomment uppercase.
+6.**Constructors**
 ```javascript
 // Good
 function Person(name) {
