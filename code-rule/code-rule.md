@@ -51,6 +51,7 @@ Excerpt (except for one line) from: Jonathan Snook “Scalable and Modular Archi
 #### Maintainable Javascript
 **Useful Tools**
 * JSLint and JSHint.
+
 **Blank Lines**
 * Between methods
 * Between the local variables in a method and its first statement
