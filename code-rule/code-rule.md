@@ -56,21 +56,29 @@ Excerpt (except for one line) from: Jonathan Snook “Scalable and Modular Archi
 * Between the local variables in a method and its first statement
 * Before a multiline or single-line comment
 * Between logical sections inside a method to improve readability
+
 **Naming**
 * Camel-case
+
 **Variables and Functions**
 * Variable names are always camel case and should begin with a noun
+
 **Verb Meaning**
+
+function | decription
+------------ | -------------
 can | Function returns a boolean
 has | Function returns a boolean
 is  | Function returns a boolean
 get | Function returns a nonboolean
 set | Function is used to save a value
+
 **Constants**
 ```javascript
 var MAX_COUNT = 10;
 ```
 * Name of constant recomment uppercase.
+
 **Constructors**
 ```javascript
 // Good
