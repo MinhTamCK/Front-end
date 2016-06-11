@@ -1,11 +1,12 @@
 ## ANGULARJS PERFORMANCE TIPS
 
 ### TIP #1: SIMPLE TRICK TO SPEED UP YOUR ANGULARJS APP LOAD TIME
-
+```javascript
 config(['$routeProvider', '$compileProvider', function($routeProvider, $compileProvider) {
     //configure routeProvider as usual
     $compileProvider.debugInfoEnabled(false);
 }]
+```
 
 ### TIP #2: SPEED UP EVENT PROCESSING USING LOCAL EVENTS IN YOUR DIRECTIVES
 
